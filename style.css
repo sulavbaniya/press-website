@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    animation: slideDown 0.5s ease-in-out; /* Slide down animation */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-info {
+    margin-top: 10px;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #ffcc00; /* Change color on hover */
+}
+
+main {
+    padding: 20px 0;
+}
+
+.maintenance-message {
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 0.5s forwards; /* Fade in animation */
+}
+
+.loader {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #007bff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto; /* Center the loader */
+}
+
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    animation: slideUp 0.5s ease-in-out; /* Slide up animation */
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    .contact-info {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+
+    footer {
+        padding: 8px 0; /* Less padding for footer */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1 .8rem; /* Smaller title for mobile */
+    }
+
+    header p {
+        font-size: 1rem; /* Smaller subtitle for mobile */
+    }
+
+    .maintenance-message p {
+        font-size: 1.2rem; /* Adjusted font size for maintenance message */
+    }
+}
